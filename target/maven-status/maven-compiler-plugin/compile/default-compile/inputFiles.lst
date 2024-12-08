@@ -1,0 +1,8 @@
+C:\Users\oumai\Documents\EMSI\Archi\TP_GRPC\TP_GRPC\src\main\java\ma\emsi\grpc\config\GrpcConfig.java
+C:\Users\oumai\Documents\EMSI\Archi\TP_GRPC\TP_GRPC\src\main\java\ma\emsi\grpc\controller\CompteController.java
+C:\Users\oumai\Documents\EMSI\Archi\TP_GRPC\TP_GRPC\src\main\java\ma\emsi\grpc\entities\Compte.java
+C:\Users\oumai\Documents\EMSI\Archi\TP_GRPC\TP_GRPC\src\main\java\ma\emsi\grpc\entities\TypeCompte.java
+C:\Users\oumai\Documents\EMSI\Archi\TP_GRPC\TP_GRPC\src\main\java\ma\emsi\grpc\GrpcApplication.java
+C:\Users\oumai\Documents\EMSI\Archi\TP_GRPC\TP_GRPC\src\main\java\ma\emsi\grpc\repositories\CompteRepository.java
+C:\Users\oumai\Documents\EMSI\Archi\TP_GRPC\TP_GRPC\src\main\java\ma\emsi\grpc\stub\bank\Bank.java
+C:\Users\oumai\Documents\EMSI\Archi\TP_GRPC\TP_GRPC\src\main\java\ma\emsi\grpc\stub\bank\CompteServiceGrpc.java

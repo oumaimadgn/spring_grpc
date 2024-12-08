@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+package ma.emsi.grpc;
+
+option java_package = "ma.emsi.grpc.stub.bank";
+
+
+// Enumération pour le type de compte
+enum TypeCompte {
+  COURANT = 0;
+  EPARGNE = 1;
+}
+message Compte {
+  int64 id = 1;
+  float solde = 2;
+  string dateCreation = 3;
+  TypeCompte type = 4;
+}
+message SoldeStats {
+  int32 count = 1;      // Nombre total de comptes
+  float sum = 2;        // Somme des soldes
+  float average = 3;    // Moyenne des soldes
+}
+message CompteRequest {
+  float solde = 1;
+  string dateCreation = 2;
+  TypeCompte type = 3;
+
+}
+
+service CompteService {
+  rpc GetAllComptes(Empty) returns (FindAllResponse);
+  rpc GetAllCompteswithtype(TypeCompte_req) returns (FindAllResponse);
+  rpc GetCompteById(GetCompteByIdRequest) returns (Compte);
+  rpc GetTotalSolde(Empty) returns (SoldeStats);
+  rpc SaveCompte(CompteRequest) returns (Compte);
+  rpc DeleteCompte(DeleteCompteRequest) returns (DeleteCompteResponse);
+}
+message TypeCompte_req{
+  TypeCompte type = 1;
+}
+message FindAllResponse {
+  repeated Compte compte = 1;
+}
+message GetCompteByIdRequest {
+  int64 id = 1;
+}
+message GetComptesByTypeRequest {
+  TypeCompte type = 1;
+}
+message DeleteCompteRequest {
+  int64 id = 1;
+}
+message DeleteCompteResponse {
+  bool success = 1;
+}
+message Empty {}
